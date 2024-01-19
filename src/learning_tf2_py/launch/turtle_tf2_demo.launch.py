@@ -31,7 +31,7 @@ def generate_launch_description():
                 {'turtlename': 'turtle2'}
             ]
         ),
-        #这个节点生成第二只乌龟
+        #这个节点生成第二只乌龟,生成第二只乌龟时会自动生成/turtle2/cmd_vel /turtle2/color_sensor /turtle2/pose三个话题
         Node(
             package='learning_tf2_py',
             executable='turtle_tf2_listener',
