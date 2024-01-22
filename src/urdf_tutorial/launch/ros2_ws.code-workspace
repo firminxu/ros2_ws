@@ -1,0 +1,56 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../ros2note"
+		}
+	],
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"/home/firmin/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages",
+			"/home/firmin/ros2_ws/install/py_srvcli/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/py_pubsub/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/py_launch_example/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/my_py_pubsub/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/launch_testing_examples/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_executors/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/action_tutorials_interfaces/local/lib/python3.10/dist-packages",
+			"/home/firmin/Documents/ros_ws/install/my_robot_controller/lib/python3.10/site-packages",
+			"/home/firmin/ws00_helloworld/install/pkg02_helloworld_py/lib/python3.10/site-packages",
+			"/opt/ros/humble/lib/python3.10/site-packages",
+			"/opt/ros/humble/local/lib/python3.10/dist-packages"
+		],
+		"python.analysis.extraPaths": [
+			"/home/firmin/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages",
+			"/home/firmin/ros2_ws/install/py_srvcli/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/py_pubsub/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/py_launch_example/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/my_py_pubsub/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/launch_testing_examples/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/examples_rclpy_executors/lib/python3.10/site-packages",
+			"/home/firmin/ros2_ws/install/action_tutorials_interfaces/local/lib/python3.10/dist-packages",
+			"/home/firmin/Documents/ros_ws/install/my_robot_controller/lib/python3.10/site-packages",
+			"/home/firmin/ws00_helloworld/install/pkg02_helloworld_py/lib/python3.10/site-packages",
+			"/opt/ros/humble/lib/python3.10/site-packages",
+			"/opt/ros/humble/local/lib/python3.10/dist-packages"
+		]
+	}
+}
