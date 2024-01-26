@@ -47,15 +47,15 @@ class StaticFramePublisher(Node):
     def __init__(self, transformation):
         super().__init__('static_turtle_tf2_broadcaster')
 
-        self.tf_static_broadcaster = StaticTransformBroadcaster(self)
+        self.tf_static_broadcaster = StaticTransformBroadcaster(self) #创建一个静态变换广播节点
 
-        # Publish static transforms once at startup
+        # 在启动时发布一次静态变换
         self.make_transforms(transformation)
 
     def make_transforms(self, transformation):
-        t = TransformStamped()
+        t = TransformStamped() #创建一个转换模板
 
-        t.header.stamp = self.get_clock().now().to_msg() #正在发布的转换一个时间戳
+        t.header.stamp = self.get_clock().now().to_msg() #正在发布的转换一个时间
         t.header.frame_id = 'world'  #链接的父框架的名称
         t.child_frame_id = transformation[1]  #链接的子框架的名称
 
