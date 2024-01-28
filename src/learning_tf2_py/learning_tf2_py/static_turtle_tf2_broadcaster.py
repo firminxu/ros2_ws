@@ -55,7 +55,7 @@ class StaticFramePublisher(Node):
     def make_transforms(self, transformation):
         t = TransformStamped() #创建一个转换模板
 
-        t.header.stamp = self.get_clock().now().to_msg() #正在发布的转换一个时间
+        t.header.stamp = self.get_clock().now().to_msg() #正在发布的转换时间戳
         t.header.frame_id = 'world'  #链接的父框架的名称
         t.child_frame_id = transformation[1]  #链接的子框架的名称
 
@@ -75,23 +75,34 @@ class StaticFramePublisher(Node):
 def main():
     logger = rclpy.logging.get_logger('logger')
 
-    # obtain parameters from command line arguments
+    # 从命令行参数获取参数
+    # 命令行：
+    # ros2 run learning_tf2_py static_turtle_tf2_broadcaster mystaticturtle 0 0 1 0 0 0
+    # 查看命令行：
+    # ros2 topic echo /tf_static
+    # 它使用 sys.argv 访问传递给程序的命令行参数列表。 然后它检查该列表的长度是否等于 8，
+    # 这表明正在传入 7 个参数（sys.argv 的第一个元素是 python 脚本本身的名称以及路径
+    # 在这里是/home/firmin/ros2_ws/install/learning_tf2_py/lib/learning_tf2_py/static_turtle_tf2_broadcaster
     if len(sys.argv) != 8:
         logger.info('Invalid number of parameters. Usage: \n'
                     '$ ros2 run learning_tf2_py static_turtle_tf2_broadcaster'
                     'child_frame_name x y z roll pitch yaw')
+        #logger.info(f'O: {sys.argv[0]}') #用于查看sys.argv[0]的值
         sys.exit(1)
 
     if sys.argv[1] == 'world':
         logger.info('Your static turtle name cannot be "world"')
         sys.exit(2)
 
-    # pass parameters and initialize node
+    # 传递参数并初始化节点, 这里是从命令行接收的参数
     rclpy.init()
-    node = StaticFramePublisher(sys.argv)
+    node = StaticFramePublisher(sys.argv) #
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
 
     rclpy.shutdown()
+    
+
+

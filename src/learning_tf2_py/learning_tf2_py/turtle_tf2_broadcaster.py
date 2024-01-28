@@ -58,24 +58,29 @@ class FramePublisher(Node):
 
     def __init__(self):
         super().__init__('turtle_tf2_frame_publisher')
-
+        # logger = rclpy.logging.get_logger('logger')
         # 声明和获取`turtlename` 参数
         self.turtlename = self.declare_parameter(
             'turtlename', 'turtle').get_parameter_value().string_value
 
         # 初始化transform broadcaster
+        # TransformBroadcaster 用于将变换数据从一个坐标系发送到另一个坐标系。 
+        # 这允许节点发布它们的坐标变换，以便其他节点可以查找它们。
         self.tf_broadcaster = TransformBroadcaster(self)
 
-        # Subscribe to a turtle{1}{2}/pose topic and call handle_turtle_pose
-        # callback function on each message
-        # print(f'turtlename:{self.turtlename}')
+        # 订阅海龟{1}{2}/pose 主题并调用handle_turtle_pose
+        # 每条消息的回调函数
+
         self.subscription = self.create_subscription(
             Pose,
             f'/{self.turtlename}/pose',
             self.handle_turtle_pose,
             1)
+        # logger.info(f'Subscribed to /{self.turtlename}/pose')
         self.subscription  # prevent unused variable warning
 
+    # 此方法可能会接收一条消息（msg 参数），其中包含有关海龟实体当前姿势/位置的数据。
+    # ROS 节点中的方法通常用于定义收到新消息时触发的回调。
     def handle_turtle_pose(self, msg):
         t = TransformStamped()
 
@@ -114,3 +119,5 @@ def main():
         pass
 
     rclpy.shutdown()
+
+# 用turtle_tf2_demo.launch.py文件启动的
